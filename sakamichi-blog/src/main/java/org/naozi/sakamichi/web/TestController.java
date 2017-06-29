@@ -13,12 +13,12 @@ import java.util.Map;
 public class TestController {
     @ResponseBody
     @RequestMapping("/hello")
-    public String index() {
+    public String hello() {
         return "Hello World";
     }
 
     @RequestMapping("/testView")
-    public String hello(Map<String,Object> map){
+    public String testView(Map<String,Object> map){
         map.put("name", "Naozi");
         return "test";
     }
