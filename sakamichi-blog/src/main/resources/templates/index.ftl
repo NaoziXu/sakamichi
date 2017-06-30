@@ -2236,7 +2236,7 @@
 
         <!-- jquery | jQuery 1.11.0 -->
         <!-- Credits: http://jquery.com -->
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
  		
         <!-- Js | bootstrap -->
         <!-- Credits: http://getbootstrap.com/ -->
@@ -2270,11 +2270,9 @@
         <!-- jquery | prettyPhoto -->
         <!-- Credits: http://www.no-margin-for-errors.com/ -->
         <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
-        
-        <!-- Js | gmaps -->
-        <!-- Credits: http://maps.google.com/maps/api/js?sensor=true-->
-        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-        <script type="text/javascript" src="js/gmaps.min.js"></script>
+
+        <!-- Js | BaiduMap -->
+        <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.4"></script>
 
  		<!-- Js | Js -->
         <!-- Credits: http://themeforest.net/user/FlexyCodes -->
@@ -2327,9 +2325,5 @@
 
         </script>
 
-
-        <!--[if lt IE 9]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
     </body>
 </html>

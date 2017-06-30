@@ -290,27 +290,18 @@ jQuery(document).ready(function($) {
 
 
     /* ---------------------------------------------------------------------- */
-    /* ------------------------------ Google Maps --------------------------- */
+    /* ------------------------------ Baidu Maps ---------------------------- */
     /* ---------------------------------------------------------------------- */
 
     var map;
     function initialize() {
-        map = new GMaps({
-            div: '#map',
-            lat: -37.817917,
-            lng: 144.965065,
-            zoom: 16
-
-        });
-        map.addMarker({
-            lat: -37.81792,
-            lng: 144.96506,
-            title: 'Marker with InfoWindow',
-            icon: 'images/map-marker.png',
-            infoWindow: {
-                content: '<p>Melbourne Victoria, 300, Australia</p>'
-            }
-        });
+        // set a map
+        var map = new BMap.Map("map");
+        var point = new BMap.Point(116.320093,39.984251);
+        map.centerAndZoom(point, 18);
+        // set a marker
+        var marker = new BMap.Marker(new BMap.Point(116.320093,39.984251));
+        map.addOverlay(marker);
     }
 
     /* ---------------------------------------------------------------------- */

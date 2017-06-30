@@ -2,3 +2,7 @@
 sakamichi.iml
 sakamichi-blog/sakamichi-blog.iml
 sakamichi-blog/target/
+sakamichi-management/sakamichi-management.iml
+sakamichi-management/sakamichi-management-service/target/
+sakamichi-management/sakamichi-management-service/sakamichi-management-service.iml
+sakamichi-management/sakamichi-management-intf/sakamichi-management-intf.iml
