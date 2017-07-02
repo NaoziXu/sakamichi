@@ -6,3 +6,8 @@ sakamichi-management/sakamichi-management.iml
 sakamichi-management/sakamichi-management-service/target/
 sakamichi-management/sakamichi-management-service/sakamichi-management-service.iml
 sakamichi-management/sakamichi-management-intf/sakamichi-management-intf.iml
+sakamichi-intf/target/
+sakamichi-intf/sakamichi-intf.iml
+sakamichi-dao/target/
+sakamichi-management/target/
+sakamichi-dao/sakamichi-dao.iml

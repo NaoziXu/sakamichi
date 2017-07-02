@@ -13,6 +13,8 @@
     <modules>
         <module>sakamichi-blog</module>
         <module>sakamichi-management</module>
+        <module>sakamichi-dao</module>
+        <module>sakamichi-intf</module>
     </modules>
 
     <properties>
@@ -140,6 +142,13 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
+            </dependency>
+
+            <!-- common -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
             </dependency>
 
         </dependencies>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://code.alibabatech.com/schema/dubbo
+         http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <dubbo:application name="sakamichi-dubbo-provider"/>
+
+    <dubbo:registry protocol="zookeeper" address="${dubbo.registry.address}"/>
+    <dubbo:protocol threads="${dubbo.protocol.threads}"/>
+    <dubbo:provider timeout="${dubbo.provider.timeout}" port="${dubbo.provider.port}"/>
+    <dubbo:monitor protocol="registry"/>
+
+    <bean id="dubboTestService" class="org.naozi.sakamichi.dubbo.TestServiceImpl" />
+    <dubbo:service interface="org.naozi.sakamichi.intf.ITestService" ref="dubboTestService"
+                   register="true" version="1.0.0"/>
+
+</beans>
