@@ -28,7 +28,7 @@
         <!-- rpc intf reference -->
         <dependency>
             <groupId>org.naozi</groupId>
-            <artifactId>sakamichi-management-intf</artifactId>
+            <artifactId>sakamichi-intf</artifactId>
             <version>1.0</version>
         </dependency>
 
