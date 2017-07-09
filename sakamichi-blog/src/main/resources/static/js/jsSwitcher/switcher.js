@@ -25,6 +25,11 @@ jQuery(document).ready(function($) {
 			$("#cb_slideshow" ).css("display", "block" );
 		}
     }
+    else{
+        $("#s2").click();
+        $(".yellow").click();
+        $('.bg li').eq(4).find('a').click();
+    }
 
     // type profile				
     if ($.cookie('profile_type') != null) {
@@ -220,10 +225,9 @@ jQuery(document).ready(function($) {
     })
 
     $('#button-reset a').click(function(e) {
-        var bg = '#717171';
-        $('body').css('backgroundColor', '#717171').css('backgroundImage', 'none');
-        $.cookie('layout_bgColors', bg);
-
+        $("#s2").click();
+        $(".yellow").click();
+        $('.bg li').eq(4).find('a').click();
     })
 
 });

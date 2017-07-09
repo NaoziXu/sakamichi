@@ -71,14 +71,14 @@
     <body>
 
         <!--[if lt IE 7]>
-                <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
         <!-- Laoding page -->
         <div id="preloader"><div id="spinner"></div></div>
 
         <!-- .slideshow -->
-        <ul class="cb-slideshow" id="cb_slideshow" style="display:none">
+        <ul class="cb-slideshow" id="cb_slideshow" style="display:block;">
             <li><span>Image 01</span><div></div></li>
             <li><span>Image 02</span><div></div></li>
             <li><span>Image 03</span><div></div></li>
@@ -106,27 +106,10 @@
 
     <!-- Profile Image -->
     <div class="col-lg-12 col-md-12 col-sm-3 col-xs-12 ">
-    	 
-		 
-                                
-         <div class="image-holder one" id="pic_prof_1" style="display:block">
-        
-                <img class="head-image up circle" src="images/img/up.png" width="150" height="150" alt="" />
-                <img class="head-image up-left circle" src="images/img/upleft.png" width="150" height="150" alt="" />
-                <img class="head-image left circle" src="images/img/left.png" width="150" height="150" alt="" />
-                <img class="head-image down-left circle" src="images/img/downleft.png" width="150" height="150" alt="" />
-                <img class="head-image down circle" src="images/img/down.png" width="150" height="150" alt="" />
-                <img class="head-image down-right circle" src="images/img/downright.png" width="150" height="150" alt="" />
-                <img class="head-image right circle" src="images/img/right.png" width="150" height="150" alt="" />
-                <img class="head-image up-right circle" src="images/img/upright.png" width="150" height="150" alt="" />
-                <img class="head-image front circle" src="images/img/front.png" width="150" height="150" alt="" />
-                
-        </div>
-        
+
         <!-- style for simple image profile -->		
-   		<div class="circle-img" id="pic_prof_2" style="display:none"></div>
-       
-    
+   		<div class="circle-img" id="pic_prof_2"></div>
+
     </div>
     <!-- End Profile Image -->
   
@@ -797,7 +780,7 @@
     
     
           <div class="view view-first portfolio logo" data-cat="logo">
-            <img src="images/portfolio/thumb/1.jpg" />
+            <img src="images/portfolio/1.jpg" />
             <div class="mask">
                 <h2>Project Name</h2>
                 <p>A wonderful serenity has taken possession of my entire soul.</p>
@@ -810,7 +793,7 @@
         </div> 
         
         <div class="view view-first portfolio catWeb" data-cat="catWeb">
-            <img src="images/portfolio/thumb/2.jpg" />
+            <img src="images/portfolio/2.jpg" />
             <div class="mask">
                 <h2>Project Name</h2>
                 <p>A wonderful serenity has taken possession of my entire soul.</p>
@@ -823,7 +806,7 @@
         </div> 
         
         <div class="view view-first portfolio catWeb" data-cat="catWeb">
-            <img src="images/portfolio/thumb/3.jpg" />
+            <img src="images/portfolio/3.jpg" />
             <div class="mask">
                 <h2>Project Name</h2>
                 <p>A wonderful serenity has taken possession of my entire soul.</p>
@@ -838,7 +821,7 @@
         </div> 
         
         <div class="view view-first portfolio catMotion" data-cat="catMotion">
-            <img src="images/portfolio/thumb/4.jpg" />
+            <img src="images/portfolio/4.jpg" />
             <div class="mask">
                 <h2>Project Name</h2>
                 <p>A wonderful serenity has taken possession of my entire soul.</p>
@@ -864,7 +847,7 @@
         </div> 
         
         <div class="view view-first portfolio catMotion" data-cat="catMotion">
-            <img src="images/portfolio/thumb/6.jpg" />
+            <img src="images/portfolio/6.jpg" />
             <div class="mask">
                 <h2>Project Name</h2>
                 <p>A wonderful serenity has taken possession of my entire soul.</p>
@@ -895,7 +878,7 @@
                 <h2>Project Name</h2>
                 <p>A wonderful serenity has taken possession of my entire soul.</p>
                 
-                 <a href="images/portfolio/thumb/8.jpg" rel="portfolio" class="info open-imag">
+                 <a href="images/portfolio/8.jpg" rel="portfolio" class="info open-imag">
                 	<i class="fa fa-search"></i>
                 </a>
                 <a href="http://themeforest.net/user/flexycodes" target="_blank" class="info external"><i class="fa fa-link"></i></a> 
@@ -916,7 +899,7 @@
         </div>
         
          <div class="view view-first portfolio catGraphic" data-cat="catGraphic">
-            <img src="images/portfolio/thumb/10.jpg" />
+            <img src="images/portfolio/10.jpg" />
             <div class="mask">
                 <h2>Project Name</h2>
                 <p>A wonderful serenity has taken possession of my entire soul.</p>
@@ -929,7 +912,7 @@
         </div>
         
          <div class="view view-first portfolio logo" data-cat="logo">
-            <img src="images/portfolio/thumb/11.jpg" />
+            <img src="images/portfolio/11.jpg" />
             <div class="mask">
                 <h2>Project Name</h2>
                 <p>A wonderful serenity has taken possession of my entire soul.</p>
@@ -942,7 +925,7 @@
         </div>
         
          <div class="view view-first portfolio logo" data-cat="logo">
-            <img src="images/portfolio/thumb/12.jpg" />
+            <img src="images/portfolio/12.jpg" />
             <div class="mask">
                 <h2>Project Name</h2>
                 <p>A wonderful serenity has taken possession of my entire soul.</p>
@@ -2112,7 +2095,7 @@
         <!-- Switcher -->
         <div id="custumize-style">
             <h2>Style Selector<a href="#" class="switcher"><i class="fa fa-cogs icon-switcher"></i></a></h2>
-            <div>
+            <div style="display:none;">
                 <h3>Theme Color</h3>
                 <ul class="colors-style" id="color1">
 
@@ -2130,44 +2113,40 @@
 
                 </ul>
             </div>
-            <div> 
+            <div>
 
-                <h3 class="layouts">Profile Image</h3>
-                <div id="show">
-
+                <#--<h3 class="layouts">Profile Image</h3>-->
+                <div id="show" style="display:none;">
                     <div class="clean-check">
-
-                        <input type="radio" id="r1" name="style_profile" value="style_profile_1" checked="checked" />
+                        <input type="radio" id="r1" name="style_profile" value="style_profile_1" />
                         <label for="r1"><span></span>Rotating image</label>
-
-                        <input type="radio" id="r2" name="style_profile" value="style_profile_2" />
+                        <input type="radio" id="r2" name="style_profile" value="style_profile_2" checked="checked" />
                         <label for="r2"><span></span>Fixed image</label>
-
                     </div>
                 </div>
 
 
-                
-                <h3 class="layouts">Page Builder</h3>
-                <div id="show">
-                    <div class="clean-check" style="padding-left: 30px;">
 
-                        <input type="radio" id="pb1" name="page_builder" value="http://demo.flexy-codes.com/FlexyVcard"  checked />
-                        <label for="pb1"><span></span>Style 1</label>
+                <#--<h3 class="layouts">Page Builder</h3>-->
+                <#--<div id="show">-->
+                    <#--<div class="clean-check" style="padding-left: 30px;">-->
 
-                        <input type="radio" id="pb2" name="page_builder" value="http://demo.flexy-codes.com/FlexyVcard/page-builder-2.php"  />
-                        <label for="pb2"><span></span>Style 2</label>
+                        <#--<input type="radio" id="pb1" name="page_builder" value="http://demo.flexy-codes.com/FlexyVcard"  checked />-->
+                        <#--<label for="pb1"><span></span>Style 1</label>-->
 
-                        <input type="radio" id="pb3" name="page_builder" value="http://demo.flexy-codes.com/FlexyVcard/page-builder-3.php"  />
-                        <label for="pb3"><span></span>Style 3</label>
+                        <#--<input type="radio" id="pb2" name="page_builder" value="http://demo.flexy-codes.com/FlexyVcard/page-builder-2.php"  />-->
+                        <#--<label for="pb2"><span></span>Style 2</label>-->
 
-                        <input type="radio" id="pb4" name="page_builder" value="http://demo.flexy-codes.com/FlexyVcard/page-builder-4.php"  />
-                        <label for="pb4"><span></span>Style 4</label>
-                    </div>
-                </div>      
+                        <#--<input type="radio" id="pb3" name="page_builder" value="http://demo.flexy-codes.com/FlexyVcard/page-builder-3.php"  />-->
+                        <#--<label for="pb3"><span></span>Style 3</label>-->
 
-                <h3 class="layouts">Page Animation</h3>
-                <div id="show">
+                        <#--<input type="radio" id="pb4" name="page_builder" value="http://demo.flexy-codes.com/FlexyVcard/page-builder-4.php"  />-->
+                        <#--<label for="pb4"><span></span>Style 4</label>-->
+                    <#--</div>-->
+                <#--</div>-->
+
+                <#--<h3 class="layouts">Page Animation</h3>-->
+                <div id="show" style="display:none;">
 
                     <select name="one" class="dropdown-select">
                         <optgroup label="Bouncing Entrances">
@@ -2184,7 +2163,7 @@
                             <option value="fadeInLeft">fadeInLeft</option>
                             <option value="fadeInRight">fadeInRight</option>
                             <option value="fadeInUp">fadeInUp</option>
-                        </optgroup>      
+                        </optgroup>
                     </select>
 
                 </div>
@@ -2194,11 +2173,11 @@
 
                     <div class="clean-check">
 
-						<input type="radio" id="s1" name="layout" value="bg_color" checked="checked" />
-                        <label for="s1"><span></span>Color</label>
-                        
-                        <input type="radio" id="s2" name="layout" value="bg_slider" />
+                        <input type="radio" id="s2" name="layout" value="bg_slider" checked="checked" />
                         <label for="s2"><span></span>Slider</label>
+
+                        <input type="radio" id="s1" name="layout" value="bg_color" />
+                        <label for="s1"><span></span>Color</label>
 
                     </div>
 
@@ -2206,7 +2185,7 @@
 
             </div>
 
-            <div> 
+            <div>
                 <h3>Background Color</h3>
                 <ul class="colors-style bgsolid" id="bgsolid">
                     <li><a href="#" class="gray-bg"></a></li>
@@ -2215,9 +2194,9 @@
                     <li><a href="#" class="red-bg"></a></li>
                     <li><a href="#" class="yellow-bg"></a></li>
                 </ul>
-            </div> 
+            </div>
 
-            <div>  
+            <div>
                 <h3>Background Image</h3>
                 <ul class="colors-style bg" id="bg">
                     <li><a href="#" class="bg1"></a></li>
@@ -2249,7 +2228,7 @@
         <!-- jquery | rotate and portfolio -->
         <!-- Credits: http://jquery.com -->
         <script type="text/javascript" src="js/jquery.mixitup.min.js"></script> 
-        <script type="text/javascript" src="js/HeadImage.js"></script>
+        <#--<script type="text/javascript" src="js/HeadImage.js"></script>-->
 
         <!-- Js | easyResponsiveTabs -->
         <!-- Credits: http://webtrendset.com/demo/easy-responsive-tabs/Index.html -->
@@ -2257,11 +2236,11 @@
 
         <!-- Js | jquery.cookie -->
         <!-- Credits: https://github.com/carhartl/jquery-cookie --> 
-        <script type="text/javascript" src="js/jsSwitcher/jquery.cookie.js"></script>	
+        <script type="text/javascript" src="js/jsSwitcher/jquery.cookie.js"></script>
 
         <!-- Js | switcher -->
         <!-- Credits: http://themeforest.net/user/FlexyCodes -->
-        <script type="text/javascript" src="js/jsSwitcher/switcher.js"></script>	
+        <script type="text/javascript" src="js/jsSwitcher/switcher.js"></script>
 
         <!-- Js | mCustomScrollbar -->
         <!-- Credits: http://manos.malihu.gr/jquery-custom-content-scroller -->
@@ -2281,47 +2260,47 @@
         <!-- code js for image rotate -->
         <script type="text/javascript">
 
-            var mouseX;
-            var mouseY;
-            var imageOne;
+//            var mouseX;
+//            var mouseY;
+//            var imageOne;
 
             /* Calling the initialization function */
-            $(init);
+//            $(init);
 
             /* The images need to re-initialize on load and on resize, or else the areas
              * where each image is displayed will be wrong. */
-            $(window).load(init);
-            $(window).resize(init);
+//            $(window).load(init);
+//            $(window).resize(init);
 
             /* Setting the mousemove event caller */
-            $(window).mousemove(getMousePosition);
+//            $(window).mousemove(getMousePosition);
 
             /* This function is called on document ready, on load and on resize
              * and initiallizes all the images */
-            function init() {
+//            function init() {
 
                 /* Instanciate the mouse position variables */
-                mouseX = 0;
-                mouseY = 0;
+//                mouseX = 0;
+//                mouseY = 0;
 
                 /* Instanciate a HeadImage class for every image */
-                imageOne = new HeadImage("one");
+//                imageOne = new HeadImage("one");
 
-            }
+//            }
 
             /* This function is called on mouse move and gets the mouse position. 
              * It also calls the HeadImage function to display the correct image*/
-            function getMousePosition(event) {
+//            function getMousePosition(event) {
 
                 /* Setting the mouse position variables */
-                mouseX = event.pageX;
-                mouseY = event.pageY;
+//                mouseX = event.pageX;
+//                mouseY = event.pageY;
 
                 /*Calling the setImageDirection function of the HeadImage class
                  * to display the correct image*/
-                imageOne.setImageDirection();
+//                imageOne.setImageDirection();
 
-            }
+//            }
 
         </script>
 
