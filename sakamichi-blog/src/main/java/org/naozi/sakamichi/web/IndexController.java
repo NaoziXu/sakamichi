@@ -13,10 +13,9 @@ import javax.annotation.Resource;
  * Created by Naozi on 2017/6/29.
  */
 @Controller
-@RequestMapping("/index")
 public class IndexController {
 
-    @Resource
+    @Resource(name = "iTestService")
     private ITestService iTestService;
 
     @RequestMapping("/")

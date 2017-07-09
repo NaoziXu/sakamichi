@@ -14,8 +14,8 @@
     <dubbo:provider timeout="${dubbo.provider.timeout}" port="${dubbo.provider.port}"/>
     <dubbo:monitor protocol="registry"/>
 
-    <bean id="dubboTestService" class="org.naozi.sakamichi.dubbo.TestServiceImpl" />
-    <dubbo:service interface="org.naozi.sakamichi.intf.ITestService" ref="dubboTestService"
-                   register="true" version="1.0.0"/>
+    <bean id="testServiceImpl" class="org.naozi.sakamichi.dubbo.TestServiceImpl" />
+    <dubbo:service interface="org.naozi.sakamichi.intf.ITestService" ref="testServiceImpl"
+                   version="1.0.0"/>
 
 </beans>
