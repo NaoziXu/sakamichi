@@ -11,3 +11,5 @@ sakamichi-intf/sakamichi-intf.iml
 sakamichi-dao/target/
 sakamichi-management/target/
 sakamichi-dao/sakamichi-dao.iml
+desktop.ini
+sakamichi-starter.bat
