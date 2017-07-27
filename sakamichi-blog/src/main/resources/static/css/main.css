@@ -2839,7 +2839,6 @@ li h6{
     width: 32%;
     margin: 1% 1% 0 0;
     padding: 2%;
-    cursor: pointer;
     transition: all 0.5s ease 0s;
     -moz-transition: all 0.5s ease 0s;
     -webkit-transition: all 0.5s ease 0s;

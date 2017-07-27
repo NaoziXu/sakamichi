@@ -1,13 +1,13 @@
 package org.naozi.sakamichi.web;
 
-import org.naozi.sakamichi.domain.request.TestRequestDto;
-import org.naozi.sakamichi.domain.response.TestResponseDto;
-import org.naozi.sakamichi.intf.ITestService;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * Created by Naozi on 2017/6/29.
@@ -15,20 +15,28 @@ import javax.annotation.Resource;
 @Controller
 public class IndexController {
 
-    @Resource(name = "iTestService")
-    private ITestService iTestService;
-
+    /**
+     * 跳转主页面
+     * @return
+     */
     @RequestMapping("/")
-    public String toIndex(){
-        return "index";
+    public ModelAndView toIndex(HttpServletRequest request){
+        String bathPath = request.getScheme() +"://" + request.getServerName()
+                + ":" +request.getServerPort();
+        ModelAndView view = new ModelAndView("index");
+        view.addObject("bathPath", bathPath);
+        return view;
     }
 
-    @ResponseBody
-    @RequestMapping("/testConsumer")
-    public TestResponseDto testCounsumer(){
-        TestRequestDto testRequestDto = new TestRequestDto();
-        testRequestDto.setTestParam("Naozi");
-        TestResponseDto result = iTestService.test(testRequestDto);
-        return result;
+    /**
+     * 返回页面
+     * @param viewName
+     * @return
+     */
+    @RequestMapping("/getContent/{viewName}")
+    public ModelAndView getContent(@PathVariable String viewName) {
+        ModelAndView view = new ModelAndView(viewName);
+        return view;
     }
+
 }

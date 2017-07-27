@@ -1,12 +1,9 @@
 jQuery(document).ready(function($) {
 
-    "use strict";
-
     /* ---------------------------------------------------------------------- */
     /*	------------------------------- Loading ----------------------------- */
     /* ---------------------------------------------------------------------- */
 
-    /*Page Preloading*/
     $(window).load(function() {
         $('#spinner').fadeOut(200);
         $('#preloader').delay(200).fadeOut('slow');
@@ -19,13 +16,11 @@ jQuery(document).ready(function($) {
     /* ---------------------------------------------------------------------- */
 
     $('.collapse_tabs').click(function() {
-
         if ($(this).hasClass('collapsed')) {
             $(this).find('i.glyphicon').removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
         } else {
             $(this).find('i.glyphicon').removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
         }
-
     });
 
     /* ---------------------------------------------------------------------- */
@@ -42,16 +37,46 @@ jQuery(document).ready(function($) {
         $(this).find(".icon_menu").addClass("icon_menu_active");
         $("h2.resp-accordion").not(this).find(".icon_menu").removeClass("icon_menu_active");
 
-        /*	Scroll To */
         $('html, body').animate({scrollTop: $('h2.resp-accordion').offset().top - 50}, 600);
     });
 
+    /**
+     * 一级菜单点击事件
+     */
     $(".resp-tabs-list li").click(function() {
         $(this).find(".icon_menu").addClass("icon_menu_active");
         $(".resp-tabs-list li").not(this).find(".icon_menu").removeClass("icon_menu_active");
+        var viewName = $(this).attr("data-tab-name");
+        $.ajax({
+            type: "POST",
+            url: bathPath + "/getContent/" + viewName,
+            data: $(this).serialize(),
+            dataType: "html",
+            success: function(msg) {
+                // 替换页面元素
+                $("#resp-tabs-container").html(msg);
+                // 添加滚动条
+                $(".content_2").mCustomScrollbar({
+                    mouseWheelPixels:400,
+                    theme: "dark-2",
+                    contentTouchScroll: true,
+                    advanced: {
+                        updateOnContentResize: true,
+                        updateOnBrowserResize: true,
+                        autoScrollOnFocus: false
+                    }
+                });
+                // 幻灯片特效
+                $(".cycle-slideshow").cycle();
+            }
+        });
     });
+    // 默认点击第一个
+    $(".resp-tabs-list").find("li").eq(0).click();
 
-
+    /**
+     * 一级菜单微交互
+     */
     $(".resp-tabs-list li").hover(function() {
         $(this).find(".icon_menu").addClass("icon_menu_hover");
     }, function() {
@@ -62,20 +87,6 @@ jQuery(document).ready(function($) {
         $(this).find(".icon_menu").addClass("icon_menu_hover");
     }, function() {
         $(this).find(".icon_menu").removeClass("icon_menu_hover");
-    });
-
-    /* ---------------------------------------------------------------------- */
-    /* --------------------------- Scroll tabs ------------------------------ */
-    /* ---------------------------------------------------------------------- */
-
-    $(".content_2").mCustomScrollbar({
-        theme: "dark-2",
-        contentTouchScroll: true,
-        advanced: {
-            updateOnContentResize: true,
-            updateOnBrowserResize: true,
-            autoScrollOnFocus: false
-        }
     });
 
     /* ---------------------------------------------------------------------- */
@@ -293,16 +304,7 @@ jQuery(document).ready(function($) {
     /* ------------------------------ Baidu Maps ---------------------------- */
     /* ---------------------------------------------------------------------- */
 
-    var map;
-    function initialize() {
-        // set a map
-        var map = new BMap.Map("map");
-        var point = new BMap.Point(116.320093,39.984251);
-        map.centerAndZoom(point, 18);
-        // set a marker
-        var marker = new BMap.Marker(new BMap.Point(116.320093,39.984251));
-        map.addOverlay(marker);
-    }
+
 
     /* ---------------------------------------------------------------------- */
     /* --------------------------------- Blog ------------------------------- */
@@ -425,20 +427,6 @@ jQuery(document).ready(function($) {
         });
 
     });
-
-    $('#resume').prev('h2.resp-accordion').click(function() {
-
-        $('.skillbar').each(function() {
-            $(this).find('.skillbar-bar').width(0);
-        });
-
-        $('.skillbar').each(function() {
-            $(this).find('.skillbar-bar').animate({
-                width: $(this).attr('data-percent')
-            }, 2000);
-        });
-    });
-
 
     //Change for demo page
     $('input:radio[name=page_builder]').on('change', function() {
