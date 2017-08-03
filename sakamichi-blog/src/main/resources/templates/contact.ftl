@@ -149,9 +149,10 @@
         // set a map
         var map = new BMap.Map("map");
         var point = new BMap.Point(116.320093,39.984251);
-        map.centerAndZoom(point, 18);
+        map.centerAndZoom(point, 20);
         // set a marker
         var marker = new BMap.Marker(new BMap.Point(116.320093,39.984251));
+        marker.setTitle("互联网金融中心");
         map.addOverlay(marker);
     }
 </script>

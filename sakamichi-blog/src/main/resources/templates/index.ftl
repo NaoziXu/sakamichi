@@ -143,16 +143,11 @@
                             <div id="verticalTab">
 
                                 <ul class="resp-tabs-list">
-                                    <li class="tabs-profile hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a profile"
-                                        data-tab-name="profile">
-                                        <span class="tite-list">profile</span>
-                                        <i class="fa fa-user icon_menu icon_menu_active"></i>
-                                    </li>
 
-                                    <li class="tabs-resume hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a"
-                                        data-tab-name="resume">
-                                        <span class="tite-list">resume</span>
-                                        <i class="fa fa-tasks icon_menu"></i>
+                                    <li class="tabs-blog hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a"
+                                        data-tab-name="blog">
+                                        <span class="tite-list">blog</span>
+                                        <i class="fa fa-bullhorn icon_menu icon_menu_active"></i>
                                     </li>
 
                                     <li class="tabs-portfolio hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a"
@@ -161,10 +156,16 @@
                                         <i class="fa fa-briefcase icon_menu"></i>
                                     </li>
 
-                                    <li class="tabs-blog hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a"
-                                        data-tab-name="blog">
-                                        <span class="tite-list">blog</span>
-                                        <i class="fa fa-bullhorn icon_menu"></i>
+                                    <li class="tabs-profile hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a profile"
+                                        data-tab-name="profile">
+                                        <span class="tite-list">profile</span>
+                                        <i class="fa fa-user icon_menu"></i>
+                                    </li>
+
+                                    <li class="tabs-resume hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a"
+                                        data-tab-name="resume">
+                                        <span class="tite-list">resume</span>
+                                        <i class="fa fa-tasks icon_menu"></i>
                                     </li>
 
                                     <li class="tabs-contact hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a"
@@ -173,8 +174,8 @@
                                         <i class="fa fa-envelope icon_menu"></i>
                                     </li>
 
-                                    <a href="#" id="print"><i class="fa fa-print icon_print"></i> </a>
-                                    <a href="#" id="downlowd"><i class="fa fa-download icon_print"></i> </a>
+                                    <#--<a href="#" id="print"><i class="fa fa-print icon_print"></i> </a>-->
+                                    <#--<a href="#" id="downlowd"><i class="fa fa-download icon_print"></i> </a>-->
                                 </ul>
                                 <!-- /resp-tabs-list -->
 
