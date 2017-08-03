@@ -40,6 +40,8 @@
                 width: 89%;
             }
         }
+
+
     </style>
 </head>
 
@@ -123,28 +125,9 @@
 
                                     <!-- some text -->
                                     <div id="profile_social">
-                                        <h6>一些账号</h6>
-                                        <div>
-                                            <p style="width:35%;float:left;">新浪微博</p>
-                                            <p style="width:65%;float:left;">http://weibo.com/3119742665</p>
-                                        </div>
-                                        <div>
-                                            <p style="width:35%;float:left;">OSC码云</p>
-                                            <p style="width:65%;float:left;">https://git.oschina.net/Xbh</p>
-                                        </div>
-                                        <div>
-                                            <p style="width:35%;float:left;">Github</p>
-                                            <p style="width:65%;float:left;">https://github.com/NaoziXu</p>
-                                        </div>
-                                        <div>
-                                            <p style="width:35%;float:left;">微信订阅号</p>
-                                            <p style="width:65%;float:left;">Naozi_youdianzhi</p>
-                                        </div>
-                                        <!--<div>
-                                            <p style="width:35%;float:left;">战网</p>
-                                            <p style="width:65%;float:left;">脑纸#5811</p>
-                                        </div>-->
-                                        <div class="clear"></div>
+                                        <h6>不定期更换的单曲循环</h6>
+                                        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86
+                                                src="//music.163.com/outchain/player?type=2&id=461525011&auto=1&height=66"></iframe>
                                     </div>
                                     <!-- End text -->
 
