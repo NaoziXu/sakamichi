@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.naozi.sakamichi.dao.mapper.SakamichiArticleMapper" >
+  <resultMap id="BaseResultMap" type="org.naozi.sakamichi.dao.model.SakamichiArticle" >
+    <constructor >
+      <idArg column="id" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="cover_material_ids" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="content_material_id" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="type" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="tag_ids" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="create_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="update_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="is_available" jdbcType="BIT" javaType="java.lang.Boolean" />
+    </constructor>
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="org.naozi.sakamichi.dao.model.SakamichiArticle" >
+    <constructor >
+      <idArg column="id" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="cover_material_ids" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="content_material_id" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="type" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="tag_ids" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="create_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="update_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="is_available" jdbcType="BIT" javaType="java.lang.Boolean" />
+      <arg column="overview" jdbcType="LONGVARCHAR" javaType="java.lang.String" />
+    </constructor>
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, cover_material_ids, content_material_id, type, tag_ids, create_time, update_time, 
+    is_available
+  </sql>
+  <sql id="Blob_Column_List" >
+    overview
+  </sql>
+  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="org.naozi.sakamichi.dao.model.SakamichiArticleExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from sakamichi_article
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="org.naozi.sakamichi.dao.model.SakamichiArticleExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from sakamichi_article
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from sakamichi_article
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from sakamichi_article
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="org.naozi.sakamichi.dao.model.SakamichiArticleExample" >
+    delete from sakamichi_article
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="org.naozi.sakamichi.dao.model.SakamichiArticle" >
+    insert into sakamichi_article (id, cover_material_ids, content_material_id, 
+      type, tag_ids, create_time, 
+      update_time, is_available, overview
+      )
+    values (#{id,jdbcType=BIGINT}, #{coverMaterialIds,jdbcType=VARCHAR}, #{contentMaterialId,jdbcType=BIGINT}, 
+      #{type,jdbcType=INTEGER}, #{tagIds,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP}, #{isAvailable,jdbcType=BIT}, #{overview,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="org.naozi.sakamichi.dao.model.SakamichiArticle" >
+    insert into sakamichi_article
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="coverMaterialIds != null" >
+        cover_material_ids,
+      </if>
+      <if test="contentMaterialId != null" >
+        content_material_id,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="tagIds != null" >
+        tag_ids,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="isAvailable != null" >
+        is_available,
+      </if>
+      <if test="overview != null" >
+        overview,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="coverMaterialIds != null" >
+        #{coverMaterialIds,jdbcType=VARCHAR},
+      </if>
+      <if test="contentMaterialId != null" >
+        #{contentMaterialId,jdbcType=BIGINT},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=INTEGER},
+      </if>
+      <if test="tagIds != null" >
+        #{tagIds,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isAvailable != null" >
+        #{isAvailable,jdbcType=BIT},
+      </if>
+      <if test="overview != null" >
+        #{overview,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="org.naozi.sakamichi.dao.model.SakamichiArticleExample" resultType="java.lang.Integer" >
+    select count(*) from sakamichi_article
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update sakamichi_article
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.coverMaterialIds != null" >
+        cover_material_ids = #{record.coverMaterialIds,jdbcType=VARCHAR},
+      </if>
+      <if test="record.contentMaterialId != null" >
+        content_material_id = #{record.contentMaterialId,jdbcType=BIGINT},
+      </if>
+      <if test="record.type != null" >
+        type = #{record.type,jdbcType=INTEGER},
+      </if>
+      <if test="record.tagIds != null" >
+        tag_ids = #{record.tagIds,jdbcType=BIGINT},
+      </if>
+      <if test="record.createTime != null" >
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateTime != null" >
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.isAvailable != null" >
+        is_available = #{record.isAvailable,jdbcType=BIT},
+      </if>
+      <if test="record.overview != null" >
+        overview = #{record.overview,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map" >
+    update sakamichi_article
+    set id = #{record.id,jdbcType=BIGINT},
+      cover_material_ids = #{record.coverMaterialIds,jdbcType=VARCHAR},
+      content_material_id = #{record.contentMaterialId,jdbcType=BIGINT},
+      type = #{record.type,jdbcType=INTEGER},
+      tag_ids = #{record.tagIds,jdbcType=BIGINT},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      is_available = #{record.isAvailable,jdbcType=BIT},
+      overview = #{record.overview,jdbcType=LONGVARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update sakamichi_article
+    set id = #{record.id,jdbcType=BIGINT},
+      cover_material_ids = #{record.coverMaterialIds,jdbcType=VARCHAR},
+      content_material_id = #{record.contentMaterialId,jdbcType=BIGINT},
+      type = #{record.type,jdbcType=INTEGER},
+      tag_ids = #{record.tagIds,jdbcType=BIGINT},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      is_available = #{record.isAvailable,jdbcType=BIT}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="org.naozi.sakamichi.dao.model.SakamichiArticle" >
+    update sakamichi_article
+    <set >
+      <if test="coverMaterialIds != null" >
+        cover_material_ids = #{coverMaterialIds,jdbcType=VARCHAR},
+      </if>
+      <if test="contentMaterialId != null" >
+        content_material_id = #{contentMaterialId,jdbcType=BIGINT},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="tagIds != null" >
+        tag_ids = #{tagIds,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isAvailable != null" >
+        is_available = #{isAvailable,jdbcType=BIT},
+      </if>
+      <if test="overview != null" >
+        overview = #{overview,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="org.naozi.sakamichi.dao.model.SakamichiArticle" >
+    update sakamichi_article
+    set cover_material_ids = #{coverMaterialIds,jdbcType=VARCHAR},
+      content_material_id = #{contentMaterialId,jdbcType=BIGINT},
+      type = #{type,jdbcType=INTEGER},
+      tag_ids = #{tagIds,jdbcType=BIGINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      is_available = #{isAvailable,jdbcType=BIT},
+      overview = #{overview,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.naozi.sakamichi.dao.model.SakamichiArticle" >
+    update sakamichi_article
+    set cover_material_ids = #{coverMaterialIds,jdbcType=VARCHAR},
+      content_material_id = #{contentMaterialId,jdbcType=BIGINT},
+      type = #{type,jdbcType=INTEGER},
+      tag_ids = #{tagIds,jdbcType=BIGINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      is_available = #{isAvailable,jdbcType=BIT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

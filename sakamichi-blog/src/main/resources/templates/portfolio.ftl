@@ -25,13 +25,13 @@
 
 
             <div class="view view-first portfolio logo" data-cat="logo">
-                <img src="images/portfolio/1.jpg"/>
+                <img src="${bathPath}/images/portfolio/1.jpg"/>
                 <div class="mask">
                     <h2>Project Name</h2>
                     <p>A wonderful serenity has taken possession of my entire
                         soul.</p>
 
-                    <a href="images/portfolio/1.jpg" rel="portfolio"
+                    <a href="${bathPath}/images/portfolio/1.jpg" rel="portfolio"
                        class="info open-imag">
                         <i class="fa fa-search"></i>
                     </a>
@@ -40,13 +40,13 @@
             </div>
 
             <div class="view view-first portfolio catWeb" data-cat="catWeb">
-                <img src="images/portfolio/2.jpg"/>
+                <img src="${bathPath}/images/portfolio/2.jpg"/>
                 <div class="mask">
                     <h2>Project Name</h2>
                     <p>A wonderful serenity has taken possession of my entire
                         soul.</p>
 
-                    <a href="images/portfolio/2.jpg" rel="portfolio"
+                    <a href="${bathPath}/images/portfolio/2.jpg" rel="portfolio"
                        class="info open-imag">
                         <i class="fa fa-search"></i>
                     </a>
@@ -57,13 +57,13 @@
             </div>
 
             <div class="view view-first portfolio catWeb" data-cat="catWeb">
-                <img src="images/portfolio/3.jpg"/>
+                <img src="${bathPath}/images/portfolio/3.jpg"/>
                 <div class="mask">
                     <h2>Project Name</h2>
                     <p>A wonderful serenity has taken possession of my entire
                         soul.</p>
 
-                    <a href="images/portfolio/3.jpg" rel="portfolio"
+                    <a href="${bathPath}/images/portfolio/3.jpg" rel="portfolio"
                        class="info open-imag">
                         <i class="fa fa-search"></i>
                     </a>
@@ -75,13 +75,13 @@
             </div>
 
             <div class="view view-first portfolio catMotion" data-cat="catMotion">
-                <img src="images/portfolio/4.jpg"/>
+                <img src="${bathPath}/images/portfolio/4.jpg"/>
                 <div class="mask">
                     <h2>Project Name</h2>
                     <p>A wonderful serenity has taken possession of my entire
                         soul.</p>
 
-                    <a href="images/portfolio/4.jpg" rel="portfolio"
+                    <a href="${bathPath}/images/portfolio/4.jpg" rel="portfolio"
                        class="info open-imag">
                         <i class="fa fa-search"></i>
                     </a>
@@ -92,13 +92,13 @@
             </div>
 
             <div class="view view-first portfolio catWeb" data-cat="catWeb">
-                <img src="images/portfolio/thumb/5.jpg"/>
+                <img src="${bathPath}/images/portfolio/thumb/5.jpg"/>
                 <div class="mask">
                     <h2>Project Name</h2>
                     <p>A wonderful serenity has taken possession of my entire
                         soul.</p>
 
-                    <a href="images/portfolio/5.jpg" rel="portfolio"
+                    <a href="${bathPath}/images/portfolio/5.jpg" rel="portfolio"
                        class="info open-imag">
                         <i class="fa fa-search"></i>
                     </a>
@@ -108,13 +108,13 @@
             </div>
 
             <div class="view view-first portfolio catMotion" data-cat="catMotion">
-                <img src="images/portfolio/6.jpg"/>
+                <img src="${bathPath}/images/portfolio/6.jpg"/>
                 <div class="mask">
                     <h2>Project Name</h2>
                     <p>A wonderful serenity has taken possession of my entire
                         soul.</p>
 
-                    <a href="images/portfolio/6.jpg" rel="portfolio"
+                    <a href="${bathPath}/images/portfolio/6.jpg" rel="portfolio"
                        class="info open-imag">
                         <i class="fa fa-search"></i>
                     </a>
@@ -124,13 +124,13 @@
             </div>
 
             <div class="view view-first portfolio catGraphic" data-cat="catGraphic">
-                <img src="images/portfolio/thumb/7.jpg"/>
+                <img src="${bathPath}/images/portfolio/thumb/7.jpg"/>
                 <div class="mask">
                     <h2>Project Name</h2>
                     <p>A wonderful serenity has taken possession of my entire
                         soul.</p>
 
-                    <a href="images/portfolio/7.jpg" rel="portfolio"
+                    <a href="${bathPath}/images/portfolio/7.jpg" rel="portfolio"
                        class="info open-imag">
                         <i class="fa fa-search"></i>
                     </a>
@@ -140,13 +140,13 @@
             </div>
 
             <div class="view view-first portfolio logo" data-cat="logo">
-                <img src="images/portfolio/thumb/8.jpg"/>
+                <img src="${bathPath}/images/portfolio/thumb/8.jpg"/>
                 <div class="mask">
                     <h2>Project Name</h2>
                     <p>A wonderful serenity has taken possession of my entire
                         soul.</p>
 
-                    <a href="images/portfolio/8.jpg" rel="portfolio"
+                    <a href="${bathPath}/images/portfolio/8.jpg" rel="portfolio"
                        class="info open-imag">
                         <i class="fa fa-search"></i>
                     </a>
@@ -156,13 +156,13 @@
             </div>
 
             <div class="view view-first portfolio catWeb" data-cat="catWeb">
-                <img src="images/portfolio/thumb/9.jpg"/>
+                <img src="${bathPath}/images/portfolio/thumb/9.jpg"/>
                 <div class="mask">
                     <h2>Project Name</h2>
                     <p>A wonderful serenity has taken possession of my entire
                         soul.</p>
 
-                    <a href="images/portfolio/9.jpg" rel="portfolio"
+                    <a href="${bathPath}/images/portfolio/9.jpg" rel="portfolio"
                        class="info open-imag">
                         <i class="fa fa-search"></i>
                     </a>
@@ -172,13 +172,13 @@
             </div>
 
             <div class="view view-first portfolio catGraphic" data-cat="catGraphic">
-                <img src="images/portfolio/10.jpg"/>
+                <img src="${bathPath}/images/portfolio/10.jpg"/>
                 <div class="mask">
                     <h2>Project Name</h2>
                     <p>A wonderful serenity has taken possession of my entire
                         soul.</p>
 
-                    <a href="images/portfolio/10.jpg" rel="portfolio"
+                    <a href="${bathPath}/images/portfolio/10.jpg" rel="portfolio"
                        class="info open-imag">
                         <i class="fa fa-search"></i>
                     </a>
@@ -188,13 +188,13 @@
             </div>
 
             <div class="view view-first portfolio logo" data-cat="logo">
-                <img src="images/portfolio/11.jpg"/>
+                <img src="${bathPath}/images/portfolio/11.jpg"/>
                 <div class="mask">
                     <h2>Project Name</h2>
                     <p>A wonderful serenity has taken possession of my entire
                         soul.</p>
 
-                    <a href="images/portfolio/11.jpg" rel="portfolio"
+                    <a href="${bathPath}/images/portfolio/11.jpg" rel="portfolio"
                        class="info open-imag">
                         <i class="fa fa-search"></i>
                     </a>
@@ -204,13 +204,13 @@
             </div>
 
             <div class="view view-first portfolio logo" data-cat="logo">
-                <img src="images/portfolio/12.jpg"/>
+                <img src="${bathPath}/images/portfolio/12.jpg"/>
                 <div class="mask">
                     <h2>Project Name</h2>
                     <p>A wonderful serenity has taken possession of my entire
                         soul.</p>
 
-                    <a href="images/portfolio/12.jpg" rel="portfolio"
+                    <a href="${bathPath}/images/portfolio/12.jpg" rel="portfolio"
                        target="_blank" class="info open-imag">
                         <i class="fa fa-search"></i>
                     </a>
@@ -220,13 +220,13 @@
             </div>
 
             <div class="view view-first portfolio catGraphic" data-cat="catGraphic">
-                <img src="images/portfolio/thumb/13.jpg"/>
+                <img src="${bathPath}/images/portfolio/thumb/13.jpg"/>
                 <div class="mask">
                     <h2>Project Name</h2>
                     <p>A wonderful serenity has taken possession of my entire
                         soul.</p>
 
-                    <a href="images/portfolio/13.jpg" rel="portfolio"
+                    <a href="${bathPath}/images/portfolio/13.jpg" rel="portfolio"
                        class="info open-imag">
                         <i class="fa fa-search"></i>
                     </a>
@@ -236,13 +236,13 @@
             </div>
 
             <div class="view view-first portfolio logo" data-cat="logo">
-                <img src="images/portfolio/thumb/14.jpg"/>
+                <img src="${bathPath}/images/portfolio/thumb/14.jpg"/>
                 <div class="mask">
                     <h2>Project Name</h2>
                     <p>A wonderful serenity has taken possession of my entire
                         soul.</p>
 
-                    <a href="images/portfolio/14.jpg" rel="portfolio"
+                    <a href="${bathPath}/images/portfolio/14.jpg" rel="portfolio"
                        class="info open-imag">
                         <i class="fa fa-search"></i>
                     </a>
@@ -253,13 +253,13 @@
             </div>
 
             <div class="view view-first portfolio catGraphic" data-cat="catGraphic">
-                <img src="images/portfolio/thumb/15.jpg"/>
+                <img src="${bathPath}/images/portfolio/thumb/15.jpg"/>
                 <div class="mask">
                     <h2>Project Name</h2>
                     <p>A wonderful serenity has taken possession of my entire
                         soul.</p>
 
-                    <a href="images/portfolio/15.jpg" rel="portfolio"
+                    <a href="${bathPath}/images/portfolio/15.jpg" rel="portfolio"
                        class="info open-imag">
                         <i class="fa fa-search"></i>
                     </a>

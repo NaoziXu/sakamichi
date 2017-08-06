@@ -9,22 +9,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
     <!-- CSS | bootstrap -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="${bathPath}/css/bootstrap.min.css"/>
     <!-- CSS | font-awesome -->
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="${bathPath}/css/font-awesome.min.css"/>
     <!-- CSS | animate -->
-    <link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="${bathPath}/css/animate.min.css"/>
     <!-- CSS | Normalize -->
-    <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css"/>
+    <link rel="stylesheet" type="text/css" href="${bathPath}/css/jquery.mCustomScrollbar.css"/>
     <!-- CSS | Colors -->
-    <link rel="stylesheet" type="text/css" href="css/colors/DarkBlue.css" id="colors-style"/>
-    <link rel="stylesheet" type="text/css" href="css/switcher.css"/>
+    <link rel="stylesheet" type="text/css" href="${bathPath}/css/colors/DarkBlue.css" id="colors-style"/>
+    <link rel="stylesheet" type="text/css" href="${bathPath}/css/switcher.css"/>
     <!-- CSS | Style -->
-    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="${bathPath}/css/main.css"/>
     <!-- CSS | prettyPhoto -->
-    <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css"/>
+    <link rel="stylesheet" type="text/css" href="${bathPath}/css/prettyPhoto.css"/>
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="${bathPath}/images/favicon/favicon.ico">
     <!-- CSS |  -->
 
     <style>
@@ -326,29 +326,29 @@
 
 
 <!-- jquery | jQuery 1.11.0 -->
-<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="${bathPath}/js/jquery.min.js"></script>
 <!-- Js | bootstrap -->
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="${bathPath}/js/bootstrap.min.js"></script>
 <!-- Js | jquery.cycle -->
-<script type="text/javascript" src="js/jquery.cycle2.min.js"></script>
+<script type="text/javascript" src="${bathPath}/js/jquery.cycle2.min.js"></script>
 <!-- jquery | rotate and portfolio -->
-<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+<script type="text/javascript" src="${bathPath}/js/jquery.mixitup.min.js"></script>
 <!-- Js | easyResponsiveTabs -->
-<script type="text/javascript" src="js/easyResponsiveTabs.min.js"></script>
+<script type="text/javascript" src="${bathPath}/js/easyResponsiveTabs.min.js"></script>
 <!-- Js | jquery.cookie -->
-<script type="text/javascript" src="js/jsSwitcher/jquery.cookie.js"></script>
+<script type="text/javascript" src="${bathPath}/js/jsSwitcher/jquery.cookie.js"></script>
 <!-- Js | switcher -->
-<script type="text/javascript" src="js/jsSwitcher/switcher.js"></script>
+<script type="text/javascript" src="${bathPath}/js/jsSwitcher/switcher.js"></script>
 <!-- Js | mCustomScrollbar -->
-<script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="${bathPath}/js/jquery.mCustomScrollbar.concat.min.js"></script>
 <!-- jquery | prettyPhoto -->
-<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="${bathPath}/js/jquery.prettyPhoto.js"></script>
 <!-- Js | BaiduMap -->
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.4"></script>
 <!-- Js | Js -->
 <script type="text/javascript">
-    var bathPath = "${bathPath}" + "${request.contextPath}";
+    var bathPath = "${bathPath}";
 </script>
-<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="${bathPath}/js/main.js"></script>
 </body>
 </html>

@@ -1611,7 +1611,7 @@
                                 minutes, you can show your online card to your
                                 friend, customer or employer in an interview by
                                 phone or tablet. Because FlexyVcard is a responsive
-                                template, you can view your website on pc as well as
+                                templates, you can view your website on pc as well as
                                 handheld devices. You can also link to your social
                                 profiles, display your portfolio in many media
                                 format such as image, youtube video, flash...</p>

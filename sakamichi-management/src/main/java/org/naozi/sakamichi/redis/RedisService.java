@@ -1,6 +1,6 @@
 package org.naozi.sakamichi.redis;
 
-import org.naozi.sakamichi.domain.ResultBean;
+import org.naozi.sakamichi.dao.domain.ResultBean;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
