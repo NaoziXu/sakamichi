@@ -6,11 +6,11 @@
         <meta name="renderer" content="webkit">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link rel="shortcut icon" href="${bathPath}/lib/favicon/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="${basePath}/lib/favicon/favicon.ico" type="image/x-icon" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="format-detection" content="telephone=no">
-        <link rel="stylesheet" href="${bathPath}/css/x-admin.css" media="all">
+        <link rel="stylesheet" href="${basePath}/css/x-admin.css" media="all">
     </head>
     <body>
         <div class="layui-layout layui-layout-admin">
@@ -26,7 +26,7 @@
                         <dl class="layui-nav-child"> <!-- 二级菜单 -->
                           <dd><a href="">个人信息</a></dd>
                           <dd><a href="">切换帐号</a></dd>
-                          <dd><a href="${bathPath}/logout">退出</a></dd>
+                          <dd><a href="${basePath}/logout">退出</a></dd>
                         </dl>
                       </li>
                     </ul>
@@ -37,7 +37,7 @@
                 <div class="layui-side-scroll">
                     <ul id="main-menu" class="layui-nav layui-nav-tree site-demo-nav" lay-filter="side">
                         <li class="layui-nav-item">
-                            <a _href="${bathPath}/getContent/welcome" href="javascript:;">
+                            <a _href="${basePath}/getContent/welcome" href="javascript:;">
                                 <i class="layui-icon" style="top: 3px;">&#xe62d;</i><cite>首页</cite>
                             </a>
                         </li>
@@ -56,17 +56,17 @@
                             </a>
                             <dl class="layui-nav-child">
                                 <dd>
-                                    <a href="javascript:;" _href="${bathPath}/material/toImageMaterial">
+                                    <a href="javascript:;" _href="${basePath}/material/toImageMaterial">
                                         <cite>图片</cite>
                                     </a>
                                 </dd>
                                 <dd>
-                                    <a href="javascript:;" _href="${bathPath}/material/toImageTextMaterial">
+                                    <a href="javascript:;" _href="${basePath}/material/toImageTextMaterial">
                                         <cite>图文</cite>
                                     </a>
                                 </dd>
                                 <dd>
-                                    <a href="javascript:;" _href="${bathPath}/material/toArticleMaterial">
+                                    <a href="javascript:;" _href="${basePath}/material/toArticleMaterial">
                                         <cite>文章</cite>
                                     </a>
                                 </dd>
@@ -134,16 +134,16 @@
                 </ul>
                 <div class="layui-tab-content site-demo site-demo-body">
                     <div class="layui-tab-item layui-show">
-                        <iframe frameborder="0" src="${bathPath}/getContent/welcome" class="x-iframe"></iframe>
+                        <iframe frameborder="0" src="${basePath}/getContent/welcome" class="x-iframe"></iframe>
                     </div>
                 </div>
             </div>
             <div class="site-mobile-shade">
             </div>
         </div>
-        <script src="${bathPath}/js/jquery.min.js"></script>
-        <script src="${bathPath}/lib/layui/layui.js" charset="utf-8"></script>
-        <script src="${bathPath}/js/x-admin.js"></script>
+        <script src="${basePath}/js/jquery.min.js"></script>
+        <script src="${basePath}/lib/layui/layui.js" charset="utf-8"></script>
+        <script src="${basePath}/js/x-admin.js"></script>
         <script type="text/javascript">
         </script>
     </body>

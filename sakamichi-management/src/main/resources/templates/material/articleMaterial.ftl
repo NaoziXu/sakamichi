@@ -9,7 +9,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="${bathPath}/css/x-admin.css" media="all">
+    <link rel="stylesheet" href="${basePath}/css/x-admin.css" media="all">
 </head>
 <body>
 <div class="x-body">
@@ -25,8 +25,8 @@
 
     </div>
 </div>
-<script src="${bathPath}/lib/layui/layui.js" charset="utf-8"></script>
-<script src="${bathPath}/js/x-admin.js"></script>
+<script src="${basePath}/lib/layui/layui.js" charset="utf-8"></script>
+<script src="${basePath}/js/x-admin.js"></script>
 <script type="text/javascript">
     $(function() {
 

@@ -9,7 +9,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="${bathPath}/css/x-admin.css" media="all">
+    <link rel="stylesheet" href="${basePath}/css/x-admin.css" media="all">
 </head>
 <body>
 <div class="x-body">
@@ -25,10 +25,10 @@
 
     </div>
 </div>
-<script src="${bathPath}/js/jquery.min.js"></script>
-<script src="${bathPath}/lib/layui/layui.js" charset="utf-8"></script>
-<script src="${bathPath}/js/x-admin.js"></script>
-<script src="${bathPath}/js/x-layui.js"></script>
+<script src="${basePath}/js/jquery.min.js"></script>
+<script src="${basePath}/lib/layui/layui.js" charset="utf-8"></script>
+<script src="${basePath}/js/x-admin.js"></script>
+<script src="${basePath}/js/x-layui.js"></script>
 <script type="text/javascript">
     layui.use(['element','layer','form'], function(){
         $ = layui.jquery;//jquery
@@ -41,7 +41,7 @@
     });
 
     function addNew(){
-        x_admin_show("新增图片","${bathPath}/material/toEditImageMaterial/0",700,500);
+        x_admin_show("新增图片","${basePath}/material/toEditImageMaterial/0",700,500);
     }
 
     function update() {

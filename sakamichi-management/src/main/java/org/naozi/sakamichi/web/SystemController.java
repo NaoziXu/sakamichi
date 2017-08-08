@@ -1,12 +1,10 @@
 package org.naozi.sakamichi.web;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
 
 /**
  * Created by Naozi on 2017/6/29.
@@ -14,19 +12,43 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 public class SystemController {
 
-    @Value("${server.contextPath}")
-    private String appName;
+    /**
+     * 跳转默认页面
+     * @return
+     */
+    @RequestMapping("/")
+    public ModelAndView toDefault(){
+        ModelAndView view = new ModelAndView("login");
+        return view;
+    }
+
+    /**
+     * 跳转登陆页面
+     * @return
+     */
+    @RequestMapping("/login")
+    public ModelAndView toLogin(){
+        ModelAndView view = new ModelAndView("login");
+        return view;
+    }
+
+    /**
+     * 登出并跳转登出页面
+     * @return
+     */
+    @RequestMapping("/logout")
+    public ModelAndView logout(){
+        ModelAndView view = new ModelAndView("login");
+        return view;
+    }
 
     /**
      * 跳转主页面
      * @return
      */
-    @RequestMapping("/")
-    public ModelAndView toIndex(HttpServletRequest request){
-        String bathPath = request.getScheme() +"://" + request.getServerName()
-                + ":" +request.getServerPort() + appName;
+    @RequestMapping("/index")
+    public ModelAndView toIndex(){
         ModelAndView view = new ModelAndView("index");
-        view.addObject("bathPath", bathPath);
         return view;
     }
 
@@ -36,25 +58,8 @@ public class SystemController {
      * @return
      */
     @RequestMapping("/getContent/{viewName}")
-    public ModelAndView getContent(HttpServletRequest request,@PathVariable String viewName) {
-        String bathPath = request.getScheme() +"://" + request.getServerName()
-                + ":" +request.getServerPort() + appName;
+    public ModelAndView getContent(@PathVariable String viewName) {
         ModelAndView view = new ModelAndView(viewName);
-        view.addObject("bathPath", bathPath);
-        return view;
-    }
-
-    /**
-     * 登出
-     * @param request
-     * @return
-     */
-    @RequestMapping("/logout")
-    public ModelAndView logout(HttpServletRequest request){
-        String bathPath = request.getScheme() +"://" + request.getServerName()
-                + ":" +request.getServerPort() + appName;
-        ModelAndView view = new ModelAndView("login");
-        view.addObject("bathPath", bathPath);
         return view;
     }
 

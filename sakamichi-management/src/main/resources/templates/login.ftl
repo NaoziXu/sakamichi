@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-    
     <head>
         <meta charset="utf-8">
         <title>
@@ -9,11 +8,11 @@
         <meta name="renderer" content="webkit">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="${basePath}/lib/favicon/favicon.ico" type="image/x-icon" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="format-detection" content="telephone=no">
-        <link rel="stylesheet" href="./css/x-admin.css" media="all">
+        <link rel="stylesheet" href="${basePath}/css/x-admin.css" media="all">
     </head>
     
     <body style="background-color: #393D49">
@@ -33,7 +32,7 @@
             </div>
             <div class="x-mid">
                 <div class="x-avtar">
-                    <img src="./images/logo.png" alt="">
+                    <img src="${basePath}/images/logo.png" alt="">
                 </div>
                 <div class="input">
                     <form class="layui-form">
@@ -65,7 +64,7 @@
             </div>
         </div>
         <p style="color:#fff;text-align: center;">Copyright © 2017.Company name All rights X-admin </p>
-        <script src="./lib/layui/layui.js" charset="utf-8">
+        <script src="${basePath}/lib/layui/layui.js" charset="utf-8">
         </script>
         <script>
             layui.use(['form'],

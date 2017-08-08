@@ -19,65 +19,46 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/material")
 public class MaterialController {
 
-    @Value("${server.contextPath}")
-    private String appName;
-
     private String pagePath = "/material/";
 
     /**
      * 跳转图片素材页面
-     * @param request
      * @return
      */
     @RequestMapping("/toImageMaterial")
-    public ModelAndView toImageMaterial(HttpServletRequest request){
-        String bathPath = request.getScheme() +"://" + request.getServerName()
-                + ":" +request.getServerPort() + appName;
+    public ModelAndView toImageMaterial(){
         ModelAndView view = new ModelAndView(pagePath + "imageMaterial");
-        view.addObject("bathPath", bathPath);
         return view;
     }
 
     /**
      * 跳转图文素材页面
-     * @param request
      * @return
      */
     @RequestMapping("/toImageTextMaterial")
-    public ModelAndView toImageTextMaterial(HttpServletRequest request){
-        String bathPath = request.getScheme() +"://" + request.getServerName()
-                + ":" +request.getServerPort() + appName;
+    public ModelAndView toImageTextMaterial(){
         ModelAndView view = new ModelAndView(pagePath + "imageTextMaterial");
-        view.addObject("bathPath", bathPath);
         return view;
     }
 
     /**
      * 跳转文章素材页面
-     * @param request
      * @return
      */
     @RequestMapping("/toArticleMaterial")
-    public ModelAndView toArticleMaterial(HttpServletRequest request){
-        String bathPath = request.getScheme() +"://" + request.getServerName()
-                + ":" +request.getServerPort() + appName;
+    public ModelAndView toArticleMaterial(){
         ModelAndView view = new ModelAndView(pagePath + "articleMaterial");
-        view.addObject("bathPath", bathPath);
         return view;
     }
 
     /**
      * 跳转图片素材编辑页面
      * @param materialId
-     * @param request
      * @return
      */
     @RequestMapping("/toEditImageMaterial/{materialId}")
-    public ModelAndView toEditImageMaterial(@PathVariable Long materialId, HttpServletRequest request){
-        String bathPath = request.getScheme() +"://" + request.getServerName()
-                + ":" +request.getServerPort() + appName;
+    public ModelAndView toEditImageMaterial(@PathVariable Long materialId){
         ModelAndView view = new ModelAndView(pagePath + "imageMaterialEdit");
-        view.addObject("bathPath", bathPath);
         view.addObject("materialId", materialId);
         return view;
     }
