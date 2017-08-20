@@ -2,6 +2,7 @@ package org.naozi.sakamichi.system.interceptor;
 
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
@@ -12,6 +13,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+@Component
 public class CommonRenderVariableInterceptor extends HandlerInterceptorAdapter implements InitializingBean {
 
 	/**
@@ -54,14 +56,11 @@ public class CommonRenderVariableInterceptor extends HandlerInterceptorAdapter i
 				modelAndView.addAllObjects(getBasicParam(request, response));
 			}
 			// 验证会话合法性
-			HttpSession session = request.getSession();
-			Object userObj = session.getAttribute(sessionKey);
-			if(userObj == null && !"login".equals(viewName) && !"error".equals(viewName)){
-				modelAndView.setViewName("redirect:/login");
-			}
-		}
-		else {
-			return;
+//			HttpSession session = request.getSession();
+//			Object userObj = session.getAttribute(sessionKey);
+//			if(userObj == null && !"login".equals(viewName) && !"error".equals(viewName)){
+//				modelAndView.setViewName("redirect:/login");
+//			}
 		}
 	}
 
