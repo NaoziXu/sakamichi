@@ -7,7 +7,7 @@
          http://code.alibabatech.com/schema/dubbo
          http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-    <dubbo:application name="sakamichi-dubbo-provider"/>
+    <dubbo:application name="sakamichi-management"/>
 
     <dubbo:registry protocol="zookeeper" address="${dubbo.registry.address}"/>
     <dubbo:protocol threads="${dubbo.protocol.threads}"/>
