@@ -22,12 +22,6 @@ public class CommonRenderVariableInterceptor extends HandlerInterceptorAdapter i
 	@Value("${sakamichi.session.key}")
 	private String sessionKey;
 
-	/**
-	 * 应用名
-	 */
-	@Value("${server.contextPath}")
-	private String appName;
-
 	// 系统启动并初始化一次的变量
 	private Map<String, Object> globalRenderVariables = new HashMap<>();
 
@@ -78,7 +72,7 @@ public class CommonRenderVariableInterceptor extends HandlerInterceptorAdapter i
 	 */
 	private Map<String, Object> getBasicParam(HttpServletRequest request, HttpServletResponse response) {
 		String basePath = request.getScheme() +"://" + request.getServerName()
-				+ ":" +request.getServerPort() + appName;
+				+ ":" +request.getServerPort();
 		HashMap<String, Object> paramMap = new HashMap<>();
 		paramMap.put("baseTime", new Date());
 		paramMap.put("basePath", basePath);
