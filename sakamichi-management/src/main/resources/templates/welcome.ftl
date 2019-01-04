@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>
-            X-admin v1.0
+            welcome
         </title>
         <meta name="renderer" content="webkit">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -11,7 +11,7 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="format-detection" content="telephone=no">
-        <link rel="stylesheet" href="${basePath}/css/x-admin.css" media="all">
+        <#include "common/basic.ftl">
     </head>
     <body>
         <div class="x-body">
@@ -179,23 +179,6 @@
                 </tbody>
             </table>
         </div>
-        <div class="layui-footer footer footer-demo">
-            <div class="layui-main">
-                <p>感谢layui,百度Echarts,jquery</p>
-                <p>
-                    <a href="/">
-                        Copyright ©2017 x-admin v2.3 All Rights Reserved.
-                    </a>
-                </p>
-                <p>
-                    <a href="./" target="_blank">
-                        本后台系统由X前端框架提供前端技术支持
-                    </a>
-                </p>
-            </div>
-        </div>
-        <script src="${basePath}/lib/layui/layui.js" charset="utf-8"></script>
-        <script src="${basePath}/js/x-admin.js"></script>
         <script>
         var _hmt = _hmt || [];
         (function() {

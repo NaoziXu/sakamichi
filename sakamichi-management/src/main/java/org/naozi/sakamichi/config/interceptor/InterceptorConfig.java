@@ -8,7 +8,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import javax.annotation.Resource;
 
 /**
- * Created by lenovo on 2017/8/8.
+ * 拦截器
+ * @author lenovo
+ * @date 2017/8/8
  */
 @Configuration
 public class InterceptorConfig extends WebMvcConfigurerAdapter {

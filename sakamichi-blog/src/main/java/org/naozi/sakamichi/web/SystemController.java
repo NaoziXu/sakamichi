@@ -8,7 +8,8 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * Created by Naozi on 2017/6/29.
+ * @author Naozi
+ * @date 2017/6/29
  */
 @Controller
 public class SystemController {

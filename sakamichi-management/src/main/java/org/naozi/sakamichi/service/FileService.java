@@ -11,7 +11,8 @@ import java.io.*;
 import java.util.Date;
 
 /**
- * Created by 脑子Naozi on 2017/8/6.
+ * @author 脑子Naozi
+ * @date 2017/8/6
  */
 @Service
 public class FileService {
@@ -32,7 +33,7 @@ public class FileService {
                 if(StringUtils.isNotEmpty(surfixUpper) &&
                         ("PNG".equals(surfixUpper) || "JPEG".equals(surfixUpper)
                                 || "BMP".equals(surfixUpper) || "JPG".equals(surfixUpper))){
-                    String fileName = "IMAGE_" + new Date().getTime() + "." + surfix;
+                    String fileName = "IMAGE_" + System.currentTimeMillis() + "." + surfix;
                     byte[] bytes = file.getBytes();
                     BufferedOutputStream buffStream =
                             new BufferedOutputStream(new FileOutputStream(new File(filePath + "/" + fileName)));

@@ -1,12 +1,57 @@
 package org.naozi.sakamichi.dao.common;
 
 /**
- * Created by 脑子Naozi on 2017/8/5.
+ * @author 脑子Naozi
+ * @date 2017/8/5
  */
-public class MaterialType {
-    public static final int TEXT_MATERIAL = 0;
-    public static final int IMAGE_MATERIAL = 1;
-    public static final int IMAGE_TEXT_MATERIAL = 2;
-    public static final int HTML_MATERIAL = 3;
-    public static final int OTHER_MATERIAL = 4;
+public enum MaterialType {
+
+    /**
+     * 文章素材
+     */
+    ARTICLE_MATERIAL,
+    /**
+     * 图片素材
+     */
+    IMAGE_MATERIAL,
+    /**
+     * 音频素材
+     */
+    AUDIO_MATERIAL;
+
+    /**
+     * 根据db状态获取类型
+     * @param dbType
+     * @return
+     */
+    public MaterialType getCommentType(int dbType){
+        switch (dbType) {
+            case 0 :
+                return ARTICLE_MATERIAL;
+            case 1 :
+                return IMAGE_MATERIAL;
+            case 2 :
+                return AUDIO_MATERIAL;
+            default:
+                return null;
+        }
+    }
+
+    /**
+     * 根据状态类型获取db状态
+     * @param materialType
+     * @return
+     */
+    public Integer getDbType(MaterialType materialType){
+        switch (materialType) {
+            case ARTICLE_MATERIAL:
+                return 0;
+            case IMAGE_MATERIAL:
+                return 1;
+            case AUDIO_MATERIAL:
+                return 2;
+            default:
+                return null;
+        }
+    }
 }

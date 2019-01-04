@@ -8,9 +8,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * Created by Naozi on 2017/7/2.
+ * mq相关，暂不启动
+ * @author Naozi
+ * @date 2017/7/2
  */
-@Configuration
+//@Configuration
 public class RocketMqConfig {
     @Value("${rocketmq.namesrvAddr}")
     private String namesrvAddr;

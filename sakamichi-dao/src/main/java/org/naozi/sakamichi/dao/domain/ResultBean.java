@@ -1,5 +1,8 @@
 package org.naozi.sakamichi.dao.domain;
 
+/**
+ * @author Naozi
+ */
 public class ResultBean {
 
 	public static final String STATUS_OK = "0";

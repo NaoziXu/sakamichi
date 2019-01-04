@@ -6,11 +6,13 @@ import com.alibaba.rocketmq.client.producer.SendResult;
 import com.alibaba.rocketmq.client.producer.SendStatus;
 import com.alibaba.rocketmq.common.message.Message;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Value;
 
 import java.nio.charset.Charset;
 
 
+/**
+ * @author Naozi
+ */
 public class RocketMqProducer {
 
     private DefaultMQProducer defaultMQProducer;

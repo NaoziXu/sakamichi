@@ -4,6 +4,9 @@ import com.alibaba.rocketmq.client.consumer.DefaultMQPushConsumer;
 import com.alibaba.rocketmq.client.exception.MQClientException;
 import com.alibaba.rocketmq.common.protocol.heartbeat.MessageModel;
 
+/**
+ * @author Naozi
+ */
 public class RocketMqConsumer {
 
     private DefaultMQPushConsumer defaultMQPushConsumer;
@@ -32,7 +35,7 @@ public class RocketMqConsumer {
      */
     public void init() {
         defaultMQPushConsumer = new DefaultMQPushConsumer();
-        /**
+        /*
          * 设置消费模式:广播/集群
          * 此处注意rocket的topic和jms的topic概念上有所区别
          * 广播:任一consumer均收到producer的消息

@@ -13,6 +13,9 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * @author Naozi
+ */
 @Component
 public class CommonRenderVariableInterceptor extends HandlerInterceptorAdapter implements InitializingBean {
 
@@ -22,10 +25,15 @@ public class CommonRenderVariableInterceptor extends HandlerInterceptorAdapter i
 	@Value("${sakamichi.session.key}")
 	private String sessionKey;
 
-	// 系统启动并初始化一次的变量
+	/**
+	 * 系统启动并初始化一次的变量
+ 	 */
 	private Map<String, Object> globalRenderVariables = new HashMap<>();
 
-	// 在系统启动时会执行
+	/*
+	 * 在系统启动时会执行
+	 * @throws Exception
+	 */
 	@Override
 	public void afterPropertiesSet() throws Exception {
 		initSharedRenderVariables();
@@ -50,11 +58,11 @@ public class CommonRenderVariableInterceptor extends HandlerInterceptorAdapter i
 				modelAndView.addAllObjects(getBasicParam(request, response));
 			}
 			// 验证会话合法性
-//			HttpSession session = request.getSession();
-//			Object userObj = session.getAttribute(sessionKey);
-//			if(userObj == null && !"login".equals(viewName) && !"error".equals(viewName)){
-//				modelAndView.setViewName("redirect:/login");
-//			}
+			HttpSession session = request.getSession();
+			Object userObj = session.getAttribute(sessionKey);
+			if(userObj == null && !"login".equals(viewName) && !"error".equals(viewName)){
+				modelAndView.setViewName("redirect:/login");
+			}
 		}
 	}
 
@@ -73,9 +81,9 @@ public class CommonRenderVariableInterceptor extends HandlerInterceptorAdapter i
 	private Map<String, Object> getBasicParam(HttpServletRequest request, HttpServletResponse response) {
 		String basePath = request.getScheme() +"://" + request.getServerName()
 				+ ":" +request.getServerPort();
-		HashMap<String, Object> paramMap = new HashMap<>();
+		HashMap<String, Object> paramMap = new HashMap<>(2);
 		paramMap.put("baseTime", new Date());
-		paramMap.put("basePath", basePath);
+		paramMap.put("ctx", basePath);
 		return paramMap;
 	}
 

@@ -6,7 +6,9 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
 /**
- * Created by lenovo on 2017/8/8.
+ * 上下文
+ * @author lenovo
+ * @date 2017/8/8
  */
 @Component
 public class SakamichiApplicationContext implements ApplicationContextAware {

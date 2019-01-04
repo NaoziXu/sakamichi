@@ -6,7 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 
 /**
- * Created by Naozi on 2017/6/29.
+ * @author Naozi
+ * @date 2017/6/29
  */
 @ServletComponentScan
 @MapperScan("org.naozi.sakamichi.dao.mapper")

@@ -1,98 +1,88 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>
-            X-admin v1.0
-        </title>
-        <meta name="renderer" content="webkit">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link rel="shortcut icon" href="${basePath}/lib/favicon/favicon.ico" type="image/x-icon" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="format-detection" content="telephone=no">
-        <link rel="stylesheet" href="${basePath}/css/x-admin.css" media="all">
-    </head>
-    
-    <body style="background-color: #393D49">
-        <div class="x-box">
-            <div class="x-top">
-                <i class="layui-icon x-login-close">
-                    &#x1007;
-                </i>
-                <ul class="x-login-right">
-                    <li style="background-color: #F1C85F;" color="#F1C85F">
-                    </li>
-                    <li style="background-color: #EA569A;" color="#EA569A">
-                    </li>
-                    <li style="background-color: #393D49;" color="#393D49">
-                    </li>
-                </ul>
-            </div>
-            <div class="x-mid">
-                <div class="x-avtar">
-                    <img src="${basePath}/images/logo.png" alt="">
-                </div>
-                <div class="input">
-                    <form class="layui-form">
-                        <div class="layui-form-item x-login-box">
-                            <label for="username" class="layui-form-label">
-                                <i class="layui-icon">&#xe612;</i>
-                            </label>
-                            <div class="layui-input-inline">
-                                <input type="text" id="username" name="username" required="" lay-verify="username"
-                                autocomplete="off" placeholder="username" class="layui-input">
-                            </div>
-                        </div>
-                        <div class="layui-form-item x-login-box">
-                            <label for="pass" class="layui-form-label">
-                                <i class="layui-icon">&#xe628;</i>
-                            </label>
-                            <div class="layui-input-inline">
-                                <input type="password" id="pass" name="pass" required="" lay-verify="pass"
-                                autocomplete="off" placeholder="******" class="layui-input">
-                            </div>
-                        </div>
-                        <div class="layui-form-item" id="loginbtn">
-                            <button  class="layui-btn" lay-filter="save" lay-submit="">
-                                登 录
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <p style="color:#fff;text-align: center;">Copyright © 2017.Company name All rights X-admin </p>
-        <script src="${basePath}/lib/layui/layui.js" charset="utf-8">
-        </script>
-        <script>
-            layui.use(['form'],
-            function() {
-                $ = layui.jquery;
-                var form = layui.form(),
-                layer = layui.layer;
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sakamichi管理后台</title>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <#include "common/basic.ftl">
+    <script type="text/javascript" src="/js/sha256.js"></script>
+    <script type="text/javascript" src="/plugin/backCanvas/backCanvas.js"></script>
+    <script type="text/javascript" src="/plugin/backStretch/jquery.backstretch.min.js"></script>
+</head>
+<body>
+<canvas id="backCanvasContent" style="position:absolute;top:0;bottom:0;left:0;right:0;z-index:-1;"></canvas>
+<div class="logo" style="text-align:center;margin-top:100px;height:100px;">
+    <img id="logo" src="/images/sakamichi-logo.png" style="vertical-align:middle;display:none;">
+</div>
+<div class="login" id="loginForm" style="display:none;">
+    <div class="message">Sakamichi 管理后台</div>
+    <div id="darkbannerwrap"></div>
+    <form method="post" action="/userLogin" class="layui-form" style="margin-top:25px;">
+        <input id="username" name="username" placeholder="用户名" type="text" lay-verify="required" class="layui-input">
+        <hr class="hr15" style="background:none;">
+        <input id="password" name="password" lay-verify="required" placeholder="密码" type="password" class="layui-input">
+        <hr class="hr15" style="background:none;">
+        <input id="login" value="登录" lay-submit lay-filter="login" type="submit"
+               style="width:100%;padding:10px;font-size:15px;margin-top:62px;opacity:0.9;">
+        <hr class="hr20" style="background:none;">
+    </form>
+</div>
 
-                $('.x-login-right li').click(function(event) {
-                    color = $(this).attr('color');
-                    $('body').css('background-color', color);
-                });
-
-                //监听提交
-                form.on('submit(save)',
-                function(data) {
-                    console.log(data);
-                    layer.alert(JSON.stringify(data.field), {
-                      title: '最终的提交信息'
-                    },function  () {
-                        location.href = "./index.html";
-                    })
-                    return false;
-                });
-
+<script type="text/javascript">
+    $(function () {
+        // 界面渐入
+        $("#loginForm").fadeIn(700,function(){
+            $("#logo").fadeIn(1000);
+        });
+        // 添加动态画布
+        addCanvas("backCanvasContent");
+        // 添加幻灯片背景
+        $.backstretch(
+            [
+                "/images/bg-1.jpg", "/images/bg-2.jpg", "/images/bg-3.jpg", "/images/bg-4.jpg",
+                "/images/bg-5.jpg", "/images/bg-6.jpg", "/images/bg-7.jpg", "/images/bg.png"
+            ],
+            {
+                fade: 1000,
+                duration: 8000
+            }
+        );
+        // 添加表单模块
+        layui.use('form', function () {
+            var form = layui.form;
+            form.on('submit(login)', function (data) {
+                // 登录身份验证
+                sendLogin();
+                // 阻止页面表单提交
+                return false;
             });
+        });
+    });
 
-        </script>
-    </body>
+    // 登录身份验证
+    function sendLogin() {
+        $.post(
+            "/userLogin",
+            {
+                username: $("#username").val(),
+                password: sha256_digest($("#password").val())
+            },
+            function (data) {
+                var status = data.status;
+                console.log(data);
+                if (status === '0') {
+                    // 根据验证结果进行页面跳转
+                    window.top.location.href = "/index";
+                }
+                else {
+                    layer.msg(data.message);
+                }
+            }
+        );
+    }
+</script>
 
+</body>
 </html>
